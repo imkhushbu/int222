@@ -1,36 +1,11 @@
-/* ----------------------- Questions Solved Combined ----------------------------------
+const fs = require('fs');
 
-Q. Create a JS code to build a basic calculator that 
-performs addition, subtraction, multiplication and division. 
+fs.writeFileSync("./demo.txt", "Hello this content is from demo.txt file.");
+const data = fs.readFileSync("./demo.txt").toString();
+console.log("Read from file demo.txt");
 
-                                OR
+fs.writeFileSync("./copy.txt", data);
+console.log("Copied data from demo.txt to copy.txt");
 
-Q. Write a JS code to build a calculator which contains 2 text boxes to enter numbers 
-and buttons which perform basic operations like addition, subtraction, multiplication
-and division. 
-
-*/
-
-document.querySelector("#perform").addEventListener("click", ()=>{
-    const operation = document.querySelector("#op").value;
-    const num1 = Number(document.querySelector("#num1").value);
-    const num2 = Number(document.querySelector("#num2").value);
-    let res;
-    switch(operation){
-        case "add":
-            res = num1+num2;
-            break;
-        case "sub":
-            res = num1-num2;
-            break;
-        case "mul":
-            res = num1*num2;
-            break;
-        case "div":
-            res = num1/num2;
-            break;
-        default:
-            res = 0;
-    }
-    document.querySelector("#res").innerHTML = `Result : ${res}`;
-});
+fs.unlinkSync("./demo.txt");
+console.log("Deleted demo.txt");
