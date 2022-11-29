@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Converter</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2>Distance</h2>
+        <input type="number" id="dis_num" placeholder="Enter distance magnitude"/>
+        <br>
+        <select name="distance" id="dis">
+            <option value="mtr">To metres(from cm)</option>
+            <option value="cm">To centimetres(from m)</option>
+        </select>
+        <button id="com_dis">Convert</button>
+        <h4 id="res_dis"></h4>
+        
+        <br><br><hr>
+
+        <h2>Temperature</h2>
+        <input type="number" id="temp_num" placeholder="Enter temperature magnitude"/>
+        <br>
+        <select name="temperature" id="temp">
+            <option value="cel">To °C(from °F)</option>
+            <option value="fah">To °F(from °C)</option>
+        </select>
+        <button id="com_temp">Convert</button>
+        <h4 id="res_temp"></h4>
+        
+        <script src="app.js" async defer></script>
+    </body>
+</html>

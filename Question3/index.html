@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+        <style>
+            .warn{
+                color : rgb(184, 37, 37);
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        First Name : &nbsp;&nbsp; <input id="fname" type="text" onfocusout="fnameChange()" required/>
+        <span class="warn" id="warn_fname">  </span>
+        <br><br>
+        Last Name : &nbsp;&nbsp; <input id="lname" type="text" onfocusout="lnameChange()" required/>
+        <span class="warn" id="warn_lname">  </span>
+        <script src="app.js" async defer></script>
+        <br><br>
+
+        Password : &nbsp;&nbsp; <input id="pwd" type="text" onfocusout="validatePass()" required/>
+        <span class="warn" id="warn_pwd">  </span>
+        <br><br>
+        Confirm Password : &nbsp;&nbsp; <input id="cnf_pwd" type="password" onfocusout="validateCPass()" required/>
+        <span class="warn" id="warn_cpwd">  </span>
+        <span class="warn" id="warn_equal">  </span>
+
+        <br><br>
+
+        <button id="submit" onclick="submitForm()">Submit</button>
+
+        <script src="app.js" async defer></script>
+    </body>
+</html>

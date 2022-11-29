@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1align="center">Click on both images to see different changes</h1>
+        <h4> Image 1 : </h4> <br>
+        <img width="600" height="420" src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/475000/475457-Los-Angeles.jpg" id="img1" onmouseover="changeImage()"/>
+        
+        <br><br><br>
+
+        <h4> Image 2 : </h4> <br>
+
+        <img width="600" height="420" src="https://content.r9cdn.net/rimg/dimg/fd/78/450771ca-city-16078-177454338ca.jpg" id="img2" onmouseover="changeBackground()"/>
+        
+        <script>
+            function changeImage(){
+                document.querySelector("#img1").setAttribute('src', "https://media.timeout.com/images/105904304/750/422/image.jpg");
+            }
+            
+            function changeBackground(){
+                document.querySelector("body").style.background = "#ff1";
+            }
+        </script>
+    </body>
+</html>
